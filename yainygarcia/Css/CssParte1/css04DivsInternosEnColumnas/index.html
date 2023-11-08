@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROGRAMACION EN AMBIENTE DE REDES</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .contenedor {
+            width: 90%;
+            margin: auto;
+        }
+
+        .contenedor div {
+            width: 30%;
+            margin: 5px 5px;
+            background-color: lightblue;                      
+        }
+
+        #hijo1, #hijo2, #hijo3, #hijo4, #hijo5, #hijo6  {
+            float: left;
+            padding: 50px
+        }
+
+        p {
+            text-align: justify;
+        }
+
+        #foto img, #foto2 img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        #foto {
+            width: 250px;
+        }
+        
+        #foto2 {
+            width: 250px;
+            height: 350px;
+        }
+  
+    </style>
+<header><h1>Divs Internos en Columnas</h1></header>
+</head>
+<body>
+<div class="contenedor">
+        <div id="hijo1">
+            <p>
+                1
+                Datos para incluir en esta columna.
+                Datos para incluir en esta columna.
+                Datos para incluir en esta columna.
+                Datos para incluir en esta columna.
+                La siguiente imagen queda marginada automaticamente y ocupa el maximo ancho posible ddentro de la columna independientemente del ancho real de la foto.
+                Obviamnete el tamaño real deberia ser mayor que el maximo posible previsto en el mejor de los casos (monitor de alta resolucion). 
+            </p>
+            <div id="foto">
+                <img src="../css03DivsEnFila/meme1.png" alt="foto">
+            </div>
+        </div>
+        <div id="hijo2">
+            <p>
+                2
+                Datos para incluir en esta columna.
+                Datos para incluir en esta columna.
+                Datos para incluir en esta columna.
+                Datos para incluir en esta columna.
+                Datos para incluir en esta columna.
+            </p>
+        </div>
+        <div id="hijo3">
+            <p>
+                3
+                Datos para incluir en esta columna.
+                Datos para incluir en esta columna.
+                Datos para incluir en esta columna.
+                Datos para incluir en esta columna.
+                Datos para incluir en esta columna.
+            </p>
+        </div>
+        <div id="hijo4">
+            <p>
+                4
+                Datos para incluir en esta columna.
+                Datos para incluir en esta columna.
+                Datos para incluir en esta columna.
+                Datos para incluir en esta columna.
+                Datos para incluir en esta columna.
+            </p>
+        </div>
+        <div id="hijo5">
+            <p>
+                5
+                Datos para incluir en esta columna.
+                Datos para incluir en esta columna.
+                Datos para incluir en esta columna.
+                Datos para incluir en esta columna.
+                Datos para incluir en esta columna.
+            </p>
+        </div>
+        <div id="hijo6">
+            <p>
+                6
+                Datos para incluir en esta columna.
+                Datos para incluir en esta columna.
+                Datos para incluir en esta columna.
+                Datos para incluir en esta columna.
+                Datos para incluir en esta columna.
+            </p>
+            <div id="foto2">
+                <img src="../css02DivsEnPila/michi.jpeg" alt="foto">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

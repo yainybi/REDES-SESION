@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PROGRAMACION EN AMBIENTE DE REDES</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        #btn {
+            background-color: #1aa6b7;
+            color: white;
+            font-weight: bold;
+            width: 20vw;
+            height: 15vh;
+            font-size: 1em;
+            
+        }
+
+        .cerrar {
+            background: #606061;
+            color: #FFFFFF;
+            padding: 0.5%;
+            text-decoration: none;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            width: 24px;
+            font-weight: bold;
+        }
+        .cerrar:hover {
+            background: #1aa6b7;
+        }
+
+        #contenedor-int {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0,0,0,0.8);
+            z-index: 1;
+            display: none;
+            width: 90vw;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        #contenedor-ext {
+            width: 100vw;
+            height: 100vh;
+            background-color: peru;
+        }
+     
+    </style>
+</head>
+<body>
+    <div id="contenedor-ext">
+        <button id="btn" onclick="abrirVentanaModal()">Abrir Ventana Modal</button>
+    </div>
+
+    <div id="contenedor-int">
+        <div class="ventanaModal">
+                <a href="#" class="cerrar" title="cerrar" onclick="cerrarVentanaModal()">X</a>
+                <iframe width="80%" height="600" src="../ejer01FormVariableArregloDeObjetos/index.html" name="fcontenido" s></iframe>  
+        </div>         
+    </div>
+
+    <script>
+        function cerrarVentanaModal() {
+            document.getElementById('contenedor-int').style.display = 'none';
+            document.getElementById('contenedor-ext').style.pointerEvents = 'auto';
+            document.getElementById('contenedor-ext').style.opacity = 1;
+        }
+        function abrirVentanaModal() {
+            document.getElementById('contenedor-int').style.display = 'block';
+            document.getElementById('contenedor-ext').style.pointerEvents = 'none';
+            document.getElementById('contenedor-ext').style.opacity = 0.3;
+        }
+    </script>
+</body>
+</html>

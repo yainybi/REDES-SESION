@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PROGRAMACION EN AMBIENTE DE REDES</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            font-size: 12px;
+        }
+
+        main label {
+            display: block;
+        }
+
+        .botones {
+            display: block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 10vh;
+            background-color: gray;
+        }
+
+        .botones input {
+            width: 10%;
+            height: 8vh;
+            background-color: #AAA;
+            cursor: pointer;
+        }
+
+        form{
+            height: 80vh;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-content: flex-start;
+            flex-wrap: wrap;
+            background-color: #AAA;
+        }
+
+        form .caja {
+            padding: 1% 0 0 1%;
+            height: 23.5vh;
+            border: 1px solid black;
+        }
+
+        header, footer {
+            widows: 100%;
+            height: 10vh;
+            background-color: lightseagreen;
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        footer {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        @media (min-width:900px) {
+            
+            .caja {
+                width: 20%; 
+            }       
+        }
+        @media (min-width:700px) and (max-width:900px){
+            .caja {
+                width: 25%;
+            }
+            .caja input  {
+                width: 17vh;
+            }
+
+            form {
+                overflow: auto;
+            }
+        }
+
+        @media (min-width:300px) and (max-width:700px){
+            .caja {
+                width: 49%; 
+            }
+            .botones input {
+                width: 20%;
+            }
+
+            .caja input  {
+                width: 20vh;
+            }
+
+            form {
+                overflow: auto;
+            }
+        }
+
+        footer div {
+            margin: auto;
+        }
+          
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Formulario Responsive</h1>
+    </header>
+    <main>
+        <form action="respuesta.html" method="POST" target="_blank">
+                <div class="caja">
+                    <label for="apellido">1. Apellido:</label>
+                    <input class="entrada" type="text" name="apellido">
+                </div> 
+
+                <div class="caja">
+                    <label for="nombre">2. Nombre:</label>
+                    <input class="entrada" type="text" name="nombre">
+                </div>
+
+                <div class="caja">
+                    <label for="clave">3. Contraseña:</label>
+                    <input class="entrada" type="password" name="clave">
+                </div>
+
+                <div class="caja">
+                    <label for="desh">4. Campo Deshabilitado:</label>
+                    <input class="entrada" type="text" name="desh" placeholder="valor deshabilitado" disabled>
+                </div>
+
+                <div class="caja">
+                    <label for="f-h">5. Fecha y Hora</label>
+                    <input class="entrada" type="datetime-local" name="f-h">
+                </div>  
+
+                <div class="caja">    
+                    <label for="dni">6. DNI:</label>
+                    <input class="entrada" type="number" maxlength="8" name="dni">
+                </div>  
+
+                <div class="caja">    
+                    <label for="actv">7. Actividades Extracurriculares:</label>
+                    <label for="actv-1">Musica</label>
+                    <input class="entrada" type="checkbox" name="actv1">
+                    <label for="actv-2">Pintura Artistica</label>
+                    <input class="entrada" type="checkbox" name="actv2">
+                    <label for="actv-3">Deportes</label>
+                    <input class="entrada" type="checkbox" name="actv3">
+                    <label for="actv-4">Teatro</label>
+                    <input class="entrada" type="checkbox" name="actv4">
+                </div>  
+
+                <div class="caja">
+                    <label for="sexo">8. Sexo:</label>
+                    Masculino: <input class="entrada" type="radio" name="sexo" value="masculino" style="display: block">
+                    Femenino: <input class="entrada" type="radio" name="sexo" value="femenino" style="display: block" checked="checked">
+                </div> 
+
+                <div class="caja">
+                    <p style="font-weight: bold">9. Vacío</p>
+                </div>  
+
+                <div class="caja">
+                    <label for="estudios">10. Estudios Cursados:</label>
+                    <select name="estudios" id="">
+                        <option>Primarios</option>
+                    </select>
+                </div> 
+
+                <div class="caja">
+                    <label for="areas">11. Areas de Desempeño:</label>
+                    <select name="areas" id="">
+                        <option>Administración</option>
+                    </select>
+                </div>  
+
+                <div class="caja">
+                    <label for="turno">12. Turno:</label>
+                    <select name="turno" id="">
+                        <option>Mañana</option>
+                        <option>Tarde</option>
+                        <option>Noche</option>
+                    </select>
+                </div>  
+
+                <div class="caja">
+                    <label for="conduce">13. Conduce:</label>
+                    <input class="entrada" type="radio" name="conduce" value="si">SI
+                    <input class="entrada" type="radio" name="conduce" value="no" checked="checked">NO
+                </div>  
+    
+
+            <section class="botones">
+               <input type="submit" value="Enviar">
+               <input type="reset" value="Reset">
+            </section>
+        </form>
+    </main>
+    <footer>
+        <div>
+            <h2>Datos del Alumno</h2>
+            <h3>Yainy Garcia</h3>
+            <div><a href="mailto:yainy.garcia@comunidad.ub.edu.ar">yainy.garcia@comunidad.ub.edu.ar</a></div>
+        </div>
+    </footer>
+</body>
+</html>

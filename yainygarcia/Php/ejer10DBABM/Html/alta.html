@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PROGRAMACION EN AMBIENTE DE REDES</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .contenedor {
+            width: 100vw;
+            height: auto;
+            background-color: #ebd4d4;
+            display: flex;    
+            flex-direction: column;
+            align-items: center; 
+            overflow: hidden;      
+        }
+
+        .contenido-ventana-modal {
+            height: auto;
+        }
+
+        header, footer{
+            width: 100vw;
+            height: 10vh;
+            background-color: #0f3057;
+            color: #e7e7de;
+            font-weight: bold;
+            font-size: 2em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+       
+        input, select {
+            width: 30vw;
+            height: 8vh;
+            margin-right: 5%;
+            border: 1px solid black;
+            text-align: center;
+            font-size: 1em;
+        }
+        
+        label {
+            width: 30vw;
+            height: 8vh;
+            font-size: 1.5em;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 2% 0;
+            background-color:  #008891;
+            color: #e7e7de;
+            border: 1px solid black
+            
+        }
+
+        .elementoOptionSelect {
+            color: #709fb0;
+            background-color: #d9ecf2;
+            height: 10vh;
+            font-size: 1em;
+            font-weight: bold;
+
+            
+        }
+
+       #boton {
+           margin: 20px 0 20px 0;
+           font-size: 1em;    
+           border: 1px solid black;
+       }
+
+       #boton:hover {
+           background-color: #008891;
+           color: #e7e7de;
+           font-weight: bold;
+       }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <header>Formulario de Alta de Cedears</header>
+        <main class="contenido-ventana-modal">
+            <form action="#" method="POST" id="formularioAlta">
+
+                <label for="ticket">Nombre Ticket:</label>
+                <input type="text" name="ticket" id="ticket" required>
+
+                 <!--LISTADO CATEGORIAS-->
+                <label for="listadoDeCategorias">Listado de Categorias</label>
+                <select name="listadoDeCategorias" id="listadoDeCategorias" class="listadoDeCategorias"> 
+                    <option value="" selected="true" disabled></option>
+                </select>
+                <!--LISTADO CATEGORIAS-->
+
+                <label for="precio">Precio:</label>
+                <input type="number" name="precio" id="precio" required>
+
+                 <label for="fecha">Fecha Alta:</label>
+                <input type="date" name="fecha" id="fecha" required>
+
+                <!--<label for="icono">Icono/Logo:</label>
+                <input type="file" name="icono" id="icono" required>
+                -->
+                
+                <input type="submit" value="Alta Cedears" id="boton-alta" onclick="altaCedears()">
+            </form>
+        </main>
+        <footer>Cedears Al Vicio</footer>
+    </div>
+    <script src="../Js/alta.js"></script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PROGRAMACION EN AMBIENTE DE REDES</title>
+    <style>
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+    
+            .contenedor {
+                width: 100vw;
+                height: 50vh;
+                background-color: lightseagreen;
+            }
+            h1 {
+                color: white;
+                background-color: lightseagreen;
+                width: 100%;
+                height: auto;
+                text-align: center;
+            }
+    
+            table {
+                width: 100vw;
+                height: 50vh;
+                border-spacing: 0;
+                border: 3px solid black; 
+            }
+    
+            thead, tbody {
+                display: block;
+            }
+    
+            thead th {
+                background-color: rgb(255, 94, 65);
+                color: white;
+                border-left: 1px solid black;
+                height:10vh;
+                width: 100vw;
+            }
+            tr:nth-of-type(2n+1) {
+                background-color: rgb(61, 187, 245);
+            }
+          
+            
+            tbody {
+                overflow-y:scroll;
+                text-align: center;
+                max-height: 40vh;
+            }
+    
+            td, th  {
+                height:10vh;
+                width: 100vw;
+            }
+    
+    
+            @media (min-width:700px) and (max-width:900px){
+                body { 
+                    width: 720px; 
+                }
+                .descarto-2  {
+                    display:none;
+                }
+                tbody {
+                    overflow-y: scroll;    
+                }
+    
+                
+            }
+            @media (min-width:300px) and (max-width:700px){       
+                body { 
+                    width: 320px; 
+                }
+                .descarto  {
+                    display:none;
+                }
+                tbody {
+                    overflow-y: scroll;    
+                }
+            }
+             
+            footer div {
+                margin: auto;
+            }
+    </style>
+</head>
+<header>
+    <h1>Tablas Responsive</h1>
+</header>
+<body>
+    <div class="contenedor">
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Username</th>
+                    <th class="descarto">Correo Electronico</th>
+                    <th class="descarto descarto-2">OperationId</th>
+                    <th class="descarto descarto-2">Dinero Disponible</th>
+                    <th class="descarto descarto-2">Habilitado</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Yainybi</td>
+                    <td class="descarto">yainybi01@gmail.com</td>
+                    <td class="descarto descarto-2">2e06eeb3-3120-47e0-a2de-d739568b5b7f</td>
+                    <td class="descarto descarto-2">50000</td>
+                    <td class="descarto descarto-2"><input type="checkbox" Checked="checked"></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>luxtRONe</td>
+                    <td class="descarto">luxtRONe@gmail.com</td>
+                    <td class="descarto descarto-2">b9753757-ce68-4b34-8d5f-1a8c122f9970</td>
+                    <td class="descarto descarto-2">10789</td>
+                    <td class="descarto descarto-2"><input type="checkbox" Checked="checked"></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>NdeNArTl</td>
+                    <td class="descarto">NdeNArTl@gmail.com</td>
+                    <td class="descarto descarto-2">a703fe2c-4f48-49f3-88ac-5e8a40745891</td>
+                    <td class="descarto descarto-2">0</td>
+                    <td class="descarto descarto-2"><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>BOmycHuM</td>
+                    <td class="descarto">BOmycHuM@gmail.com</td>
+                    <td class="descarto descarto-2">a8a26fb0-44f6-11ee-be56-0242ac120002</td>
+                    <td class="descarto descarto-2">0</td>
+                    <td class="descarto descarto-2"><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Yainybi</td>
+                    <td class="descarto">yainybi01@gmail.com</td>
+                    <td class="descarto descarto-2">2e06eeb3-3120-47e0-a2de-d739568b5b7f</td>
+                    <td class="descarto descarto-2">50000</td>
+                    <td class="descarto descarto-2"><input type="checkbox" Checked="checked"></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>luxtRONe</td>
+                    <td class="descarto">luxtRONe@gmail.com</td>
+                    <td class="descarto descarto-2">b9753757-ce68-4b34-8d5f-1a8c122f9970</td>
+                    <td class="descarto descarto-2">10789</td>
+                    <td class="descarto descarto-2"><input type="checkbox" Checked="checked"></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>NdeNArTl</td>
+                    <td class="descarto">NdeNArTl@gmail.com</td>
+                    <td class="descarto descarto-2">a703fe2c-4f48-49f3-88ac-5e8a40745891</td>
+                    <td class="descarto descarto-2">0</td>
+                    <td class="descarto descarto-2"><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>BOmycHuM</td>
+                    <td class="descarto">BOmycHuM@gmail.com</td>
+                    <td class="descarto descarto-2">a8a26fb0-44f6-11ee-be56-0242ac120002</td>
+                    <td class="descarto descarto-2">0</td>
+                    <td class="descarto descarto-2"><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Yainybi</td>
+                    <td class="descarto">yainybi01@gmail.com</td>
+                    <td class="descarto descarto-2">2e06eeb3-3120-47e0-a2de-d739568b5b7f</td>
+                    <td class="descarto descarto-2">50000</td>
+                    <td class="descarto descarto-2"><input type="checkbox" Checked="checked"></td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>luxtRONe</td>
+                    <td class="descarto">luxtRONe@gmail.com</td>
+                    <td class="descarto descarto-2">b9753757-ce68-4b34-8d5f-1a8c122f9970</td>
+                    <td class="descarto descarto-2">10789</td>
+                    <td class="descarto descarto-2"><input type="checkbox" Checked="checked"></td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>NdeNArTl</td>
+                    <td class="descarto">NdeNArTl@gmail.com</td>
+                    <td class="descarto descarto-2">a703fe2c-4f48-49f3-88ac-5e8a40745891</td>
+                    <td class="descarto descarto-2">0</td>
+                    <td class="descarto descarto-2"><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>BOmycHuM</td>
+                    <td class="descarto">BOmycHuM@gmail.com</td>
+                    <td class="descarto descarto-2">a8a26fb0-44f6-11ee-be56-0242ac120002</td>
+                    <td class="descarto descarto-2">0</td>
+                    <td class="descarto descarto-2"><input type="checkbox"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+<footer>
+    <div>
+        <h2>Datos del Alumno</h2>
+        <h3>Yainy Garcia</h3>
+        <div><a href="mailto:yainy.garcia@comunidad.ub.edu.ar">yainy.garcia@comunidad.ub.edu.ar</a></div>
+    </div>
+</footer>
+</html>

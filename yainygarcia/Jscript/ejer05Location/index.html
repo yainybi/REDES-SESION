@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PROGRAMACION EN AMBIENTE DE REDES</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .contenedor {
+            width: 60vw;
+            height: 50vh;
+            background-color: cadetblue;
+            border: 2px solid black;
+            border-radius: 20%;
+            margin: 10% auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        button {
+            width: 20%;
+            height: 15%;
+            margin: 2% auto;
+            font-size: 1em;
+        }
+
+        button:hover {
+            background-color: lightseagreen
+        }
+    </style>
+</head>
+<header><h1>Location</h1></header>
+<body>
+    <div class="contenedor">
+        <button id="1">Youtube</button>
+        <button id="2">Gmail</button>
+        <button id="3">Campus UB</button>
+    </div>
+    <script>
+        var btn_1 = document.getElementById('1');
+        var btn_2 = document.getElementById('2');
+        var btn_3 = document.getElementById('3');
+
+        btn_1.onclick = function() {
+            location.href="https://www.youtube.com/";
+
+        }
+
+        btn_2.onclick = function() {
+            location.href="https://gsuite.google.com/";
+        }
+
+        btn_3.onclick = function() {
+            location.href="https://3523.campusinstituto.com.ar/";
+        }
+    </script>
+</body>
+<footer>
+    <h2>Datos del Alumno</h2>
+    <div>Yainy Garcia</div>
+    <div><a href="mailto:yainy.garcia@comunidad.ub.edu.ar">yainy.garcia@comunidad.ub.edu.ar</a></div>
+</footer>
+</html>

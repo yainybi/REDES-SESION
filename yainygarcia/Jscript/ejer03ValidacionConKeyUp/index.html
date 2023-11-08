@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PROGRAMACION EN AMBIENTE DE REDES</title>
+    <style>
+                * {
+                    padding: 0;
+                    margin: 0;
+                    box-sizing: border-box;
+                }
+        
+                .contenedor {
+                    height: 60vh;
+                    width: 80vw;
+                    margin: 2% auto;
+                    background-color: lightseagreen;
+                    border-radius: 60px;
+                    padding: 1% 0 0 3%;
+                    border: 2px solid black;
+                }
+        
+                label {
+                    display: block;
+                    margin: 1% 0 0 3%;
+                    font-size: 1em;
+                }
+        
+                input {
+                    font-size: 1em;
+                    margin: 0 0 0 3%;
+                    width: 12vw;
+                }
+        
+               .botones {
+                   height: 25vh;
+                   display: flex;
+                   justify-content: center;
+                   align-items: flex-end;
+               }
+        
+               .botones input {
+                   width: 10vw;
+               }
+        
+        
+                
+    </style>
+</head>
+<header><h1> Validación con KeyUp</h1></header>
+<body>
+    <div class="contenedor">
+        <form action="">
+                <label for="dm">Ingrese el día del mes: </label>
+                <input type="number" name="dm" id="dm" max="31" min="1" onkeyup="validarDia()">
+                <label for="m">Ingrese el mes: </label>
+                <input type="number" name="m" id="m" max="12" min="1" onkeyup="validarMes()">
+                
+                <div class="botones">
+                    <input type="reset" id="reset">
+                    <input type="submit" id="enviar">
+                </div>
+        </form>
+    </div>  
+
+    <footer>
+        <h2>Datos del Alumno</h2>
+        <div>Yainy Garcia</div>
+        <div><a href="mailto:yainy.garcia@comunidad.ub.edu.ar">yainy.garcia@comunidad.ub.edu.ar</a></div>
+    </footer>
+    
+    <script>
+
+        
+        function validarDia() {
+            var diaMes = document.getElementById('dm');
+            if(!diaMes.checkValidity()){
+                alert("El valor debe estar entre 1 y 31")  
+            }
+        }
+
+        function validarMes() {
+            var mes = document.getElementById('m');
+            if(!mes.checkValidity()){
+                alert("El valor debe estar entre 1 y 12")  
+            }
+        }
+            
+       
+    </script> 
+</body>
+</html>

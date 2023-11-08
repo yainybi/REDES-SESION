@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <title>PROGRAMACION EN AMBIENTE DE REDES</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .contenedor {
+            width: 100vw;
+            height: 100vh;
+            display: flex; 
+            flex-wrap: wrap;
+            
+        }
+
+        table {
+            width: 100vw;
+            height: 80vh;
+            border-collapse:collapse; 
+            border: none;
+            text-align: center;
+        }
+
+        header, footer {
+            width: 100vw;
+            height: 10vh;
+            background-color: #fca652;
+            color: #ac4b1c;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        .titulo, .botones {
+            width: 50vw;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .botones button {
+            height: 7vh;
+            width: 15vw;
+            font-size: 1em;  
+            color:#ac4b1c;     
+            background-color: #ffd57e;
+            border-radius: 10%;
+            border-color: #ac4b1c;
+        }     
+        
+        .botones button:hover {
+            background-color: #ac4b1c;
+            color: #ffd57e;
+        }
+
+        thead, tfoot, tbody {
+            display: block;
+        }
+
+        thead, tfoot {
+            width: 100vw;
+            height: 10vh;
+            background-color: #ffd57e;
+            color: #ac4b1c;
+        }
+
+        thead td, tfoot td {
+            width: 20vw;
+            padding: 15px;
+            border: 2px solid #ac4b1c;
+        }
+
+        tbody {
+            width: 100vw;
+            height: 60vh;
+            overflow-y: auto;
+        }
+
+        tbody td {
+            width: 20vw;
+        }
+
+        .registros-Tr {
+            background-color: #ffd57e;
+           
+        }
+
+        .registros-Td {
+            padding: 10px;
+            color: #c87941;
+        }
+
+    </style>
+</head>
+<body>
+        <div class="contenedor">
+                <header>
+                    <div class="titulo">
+                        <h1>Cedears</h1>
+                    </div>
+                    <div class="botones">
+                        <button id="crear">Mostrar datos</button>
+                        <button id="reset">Ocultar datos</button>
+                    </div>
+                </header>
+                <main>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Ticket</td>
+                                <td>Tipo de Cedears</td>
+                                <td>Descripción</td>
+                                <td>Fecha Alta</td>
+                                <td>Valor</td>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody">
+                          
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td>s codArt</td>
+                                <td>s tipoCedears</td>
+                                <td>s descripción</td>
+                                <td>s fecha alta</td>
+                                <td>s valor</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </main>
+                <footer>Cedears Al Vicio</footer>
+            </div>
+            <script src="arreglo.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<style>
+    .centrar {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -ms-transform: translate(-50%, -50%) !important;
+  -webkit-transform: translate(-50%, -50%) !important;
+  transform: translate(-50%, -50%) !important;
+  text-align: center;
+}
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PROGRAMACION EN AMBIENTE DE REDES</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="centrar">
+            <form method="POST" action="../Sesion/login.php">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Nombre del usuario">
+                </div>
+                <div class="form-group">
+                    <label for="clave">Contraseña</label>
+                    <input type="password" name="clave" class="form-control" id="clave" placeholder="Contraseña">
+                </div>
+
+                <button type="submit" class="btn btn-primary" id="iniciar-sesion">Ingresar</button>
+            </form>
+            <div id="idMensaje" style="display: none;" class="alert alert-danger my-3" role="alert">
+                <p>El Usuario y/o contraseña no es correcto.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const queryString = window.location.search;
+        if (queryString != "") {
+            //?c=401
+            const eCode = parseInt(queryString.replace("?c=", ""));
+            if (eCode == 401) {
+                document.getElementById("idMensaje").style.display = "block";
+            }
+        }
+    </script>
+</body>
+
+</html>

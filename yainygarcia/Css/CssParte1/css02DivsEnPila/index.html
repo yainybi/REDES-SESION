@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROGRAMACION EN AMBIENTE DE REDES</title>
+
+    <style>
+        html, body {
+            height:100%;
+            padding: 0;
+            margin: 0;
+        }
+        #contenedor {
+            width: 80%;
+            background-color: chartreuse;
+            align-content: center;
+            border: 1px solid black;
+
+            margin: auto;
+
+            display: flex;
+            flex-direction: column;
+           
+            justify-content: center;
+            align-items: center;
+           
+        }
+
+        .cajas {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 40%;
+            height: 250px;
+            margin: 20px 0;
+
+
+            border-radius: 10px;
+            border: solid 1px black;    
+            box-shadow: 16px 8px 2px rgba(0,0,0,0.3);  
+            
+        }
+
+        #caja-1 {
+            background-color: darkmagenta;
+            flex-direction: column;
+        }
+        #caja-2 {
+              background: radial-gradient(rgb(68, 0, 255), rgb(255, 255, 255), rgb(206, 192, 255));
+        }
+        #caja-3 {
+            background-color: rgb(42, 110, 165);
+        }
+        #caja-4 {
+            background: linear-gradient(-45deg,rgb(251, 255, 0), rgb(255, 255, 255), rgba(255, 192, 203, 0.61));
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        #caja-5 {
+            background: linear-gradient(45deg,rgb(251, 255, 0), rgb(255, 255, 255), rgba(255, 192, 203, 0.61));
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: start;
+        }
+
+        #caja-3 img {
+            max-width:100%;
+            max-height:100%;
+        }
+
+        #caja-3 #foto {
+            height:  250px;
+            border: none;    
+        }
+
+        #caja-4 div {
+            margin-left: 10%;
+        }
+
+        @media (min-width: 600px) and (max-width:1080px) {
+            #caja-1 {
+            font-size:12px;
+            background-color: yellow
+            }
+        }
+
+        @media (max-width:599px) {
+            #caja-1 {
+            font-size:12px;
+            background-color: red
+            }
+        }
+    </style>
+</head>
+<header><h1>Divs en Pila</h1></header>
+<body>
+    <div id="contenedor">
+        <div class="cajas" id="caja-1">
+            <div>
+                <h2>CAJA 1</h2>
+                <p>viewport es mayor a 1080 color morado.</p>
+                <p>viewport entre 600 a 1080 color amarillo.</p>
+                <p>viewport menor a 600 color rojo.</p>
+            </div>
+        </div>
+        <div class="cajas" id="caja-2"><h2>CAJA 2</h2></div>
+        <div class="cajas" id="caja-3">
+            <div id="foto">
+                <img src="./michi.jpeg" alt="Garu el Michi">  
+            </div>
+        </div>
+        <div class="cajas" id="caja-4">
+            <div>
+                <h2>CAJA 4</h2>
+                <p>aplicando padding</p>
+            </div>
+        </div>
+        <div class="cajas" id="caja-5">
+            <div>
+                <h2>CAJA 5</h2>
+                <p>Sin padding</p>
+            </div>
+        </div>
+    </div>
+</body>
+<footer>
+    <h2>Datos del Alumno</h2>
+    <div>Yainy Garcia</div>
+    <div><a href="mailto:yainy.garcia@comunidad.ub.edu.ar">yainy.garcia@comunidad.ub.edu.ar</a></div>
+</footer>
+</html>

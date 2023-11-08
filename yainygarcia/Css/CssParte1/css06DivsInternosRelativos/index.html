@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PROGRAMACION EN AMBIENTE DE REDES</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: lightcoral;
+        }
+
+        .contenedor {
+            width: 90%;
+            background-color: white;
+            margin: auto
+        }
+
+        .clase-1 {
+            width: 80%;
+            background-color: green;
+            padding: 10px;
+            position: relative;
+            margin: 10px 0;
+        }
+
+        .clase-2 {
+            width: 50%;
+            background-color: yellow;
+            padding: 10px;
+            position: relative;
+            left: 250px;
+            margin: 50px;
+        }
+
+        .clase-3 {
+            width: 50%;
+            height: 150px;
+            background-color: orange;
+            padding: 10px;
+            overflow-y: scroll;
+            position: relative;
+            left: 350px;
+
+        }
+
+        .clase-4 {
+            position: fixed;
+            top:20%;
+            left:25%;
+            opacity:0.5;
+            width: 55%;
+            overflow-y: scroll;
+            visibility: visible;
+            z-index: 10;
+            padding: 10px;
+            background-color: blueviolet;
+        }
+
+        .clase-4 h2 {
+            color: white;
+        }
+
+        .clase-2 h2 {
+            text-align: center;
+            color: red;
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            padding-left: 15%;
+            border-radius: 10%;
+        }
+    </style>
+<header><h1>Divs Internos Relativos</h1></header>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="clase-1"><h1>Contenedor relativo clase 1</h1></div>
+        <div class="clase-1"><h1>Contenedor relativo clase 1</h1></div>
+
+        <div class="clase-2"><h1>Contenedor relativo clase 2</h1></div>
+
+        <div class="clase-2">
+            <h1>Contenedor relativo clase 2</h1>
+            <h1>Contenedor relativo clase 2</h1>
+            <h1>Contenedor relativo clase 2</h1>
+            <h1>Contenedor relativo clase 2</h1>
+            <h1>Contenedor relativo clase 2</h1>
+        </div>
+
+        <div class="clase-2">
+            <h1>Contenedor relativo clase 2</h1>
+            <h1>Contenedor relativo clase 2</h1>
+            <h1>Contenedor relativo clase 2</h1>
+            <h1>Contenedor relativo clase 2</h1>
+            <h1>Contenedor relativo clase 2</h1>
+        </div>
+
+        <div class="clase-4">
+            <h2>Contenedos Modal 1</h2>
+            <h2>Contenedos Modal 1</h2>
+            <h2>Contenedos Modal 1</h2>
+            <h2>Contenedos Modal 1</h2>
+            <h2>Contenedos Modal 1</h2>
+            <h2>Contenedos Modal 1</h2>
+            <h2>Contenedos Modal 1</h2>
+            <h2>Contenedos Modal 1</h2>
+            <h2>Contenedos Modal 1</h2>
+        </div>
+
+        <div class="clase-3">
+            <h1>Contenedor relativo clase 3</h1>
+            <p>texto texto texto texto</p>
+            <p>texto texto texto texto</p>
+            <p>texto texto texto texto</p>
+            <p>texto texto texto texto</p>
+            <p>texto texto texto texto</p>
+            <p>texto texto texto texto</p>
+            <p>texto texto texto texto</p>
+            <p>texto texto texto texto</p>
+        </div>
+
+        <div class="clase-2">
+            <h1>Contenedor relativo clase 2</h1>
+            <h1>Contenedor relativo clase 2</h1>
+            <h1>Contenedor relativo clase 2</h1>
+            <h1>Contenedor relativo clase 2</h1>
+            <h1>Contenedor relativo clase 2</h1>
+        </div>
+
+        <div class="clase-2">
+            <h1>Contenedor relativo clase 2</h1>
+            <h1>Contenedor relativo clase 2</h1>
+            <h1>Contenedor relativo clase 2</h1>
+            <h1>Contenedor relativo clase 2</h1>
+            <h1>Contenedor relativo clase 2</h1>
+        </div>
+
+        <div class="clase-2">
+            <img src="meme9.png" alt="foto">
+            <h2>!Último ejercicio!</h2>
+        </div>
+    </div>
+</body>
+<footer>
+    <h2>Datos del Alumno</h2>
+    <div>Yainy Garcia</div>
+    <div><a href="mailto:yainy.garcia@comunidad.ub.edu.ar">yainy.garcia@comunidad.ub.edu.ar</a></div>
+</footer>
+</html>

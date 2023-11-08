@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROGRAMACION EN AMBIENTE DE REDES</title>
+</head>
+<body>
+    <header>
+        <h1>Formularios</h1>
+    </header>
+    <main>
+
+        <form action="./respuestaFormulario.html" target="_blank" method="get">
+            <h2>Sección de Entradas Simples</h2>
+
+            <ul>
+                <li style="margin-top:10px">
+                    <div><label style="font-weight: bold" for="apellido" >Apellido</label></div>
+                    <div><input type="text" id="apellido" name="apellido" value="" autofocus="autofocus"/></div>
+                </li>
+
+                <li style="margin-top:10px">
+                    <div><label style="font-weight: bold" for="contraseña" >Contraseña</label></div>
+                    <div><input type="password" id="contraseña" name="contraseña" value="" autofocus="autofocus"/></div>
+                </li>
+
+                <li style="margin-top:10px">
+                    <div><label style="font-weight: bold" for="oculto" >Oculto</label></div>
+                    <div><input type="hidden" id="oculto" name="oculto" value=""/></div>
+                </li>
+        
+                <li style="margin-top:10px">
+                    <div><label style="font-weight: bold" for="deshabilitado" >Campo deshabilitado</label></div>
+                    <div><input type="text" id="deshabilitado" name="deshabilitado" value="" disabled/></div>
+                </li>
+
+                <li style="margin-top:10px">
+                    <div><label style="font-weight: bold" for="lectura" >Campo solo Lectura</label></div>
+                    <div><input type="text" id="lectura" name="lectura" value="Valor solo de lectura" readonly/></div>
+                </li>
+
+            <h2>Sección de Entradas de Selección</h2>
+            <h4>Seleccione sus pasatiempos:</h4>
+                <li>
+                    <div><label style="font-weight: bold" for="peliculas" >Peliculas</label></div>
+                    <div><input type="checkbox" id="peliculas" name="peliculas"/></div>
+                </li>
+
+                <li>
+                    <div><label style="font-weight: bold" for="libros" >Libros</label></div>
+                    <div><input type="checkbox" id="libros" name="libros"/></div>
+                </li>
+
+                <li>
+                    <div><label style="font-weight: bold" for="musica" >Musica</label></div>
+                    <div><input type="checkbox" id="musica" name="musica"/></div>
+                </li>
+
+                <li style="margin-top:30px">
+                    <div><label style="font-weight: bold" for="equipo">Seleccione su equipo favorito</label></div>
+                    <input type="radio" id="boca" name="equipo" value="boca" checked="checked">Club Atlético Boca Juniors
+                    <input type="radio" id="river" name="equipo" value="river">Club Atlético River Plate
+                </li>
+
+                <li style="margin-top:30px">
+                    <div><label style="font-weight: bold" for="autos">Seleccione modelo auto favorito:</label></div>
+                    <select name="autos" id="autos">
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                    </select>
+                </li>
+
+                <li style="margin-top:30px">
+                    <div><label style="font-weight: bold" for="fecha-hora">Seleccione Fecha y Hora:</label></div>
+                    <input type="datetime-local" id="fecha-hora" name="fecha-hora">
+                </li>
+
+                <li style="margin-top:30px">
+                    <div><label style="font-weight: bold" for="color">Color:</label></div>
+                    <input type="color" id="color" name="color">
+                </li>
+       
+            <h2>Sección de Entradas con Validación</h2>
+                <li style="margin-top:10px">
+                    <div><label style="font-weight: bold" for="comentario">Comentario</label></div>
+                    <div><input type="text" id="comentario" name="comentario" required/></div>
+                </li>
+
+                <li style="margin-top:20px">
+                    <div><label style="font-weight: bold" for="user-email">Email</label></div>
+                    <div><input type="email" id="user-email" name="user-email"  placeholder="texto@texto" required/></div>
+                </li>
+
+                <li style="margin-top:20px">
+                    <div><label style="font-weight: bold" for="entero">Selccione número entero entre 1-10</label></div>
+                    <div><input type="number" id="entero" name="entero" min="1" max="10" required/></div>
+                </li>
+
+                <li style="margin-top:20px">
+                    <div><label style="font-weight: bold" for="decimal">Selccione número decimal entre 1-10</label></div>
+                    <div><input type="number" id="decimal" name="decimal" min="1" max="10" step="0.1" required/></div>
+                </li>
+
+                <li style="margin-top:20px">
+                    <div><label style="font-weight: bold" for="sitio">Escriba url</label></div>
+                    <div><input type="url" id="sitio" name="sitio" placeholder="http://xxx" required/></div>
+                </li>
+
+                <li style="margin-top:20px">
+                    <div><label style="font-weight: bold" for="cars-amex">Escriba su Tarjeta American Express</label></div>
+                    <div>
+                        <input type="text" 
+                        pattern="^3[47][0-9]{13}$" 
+                        id="cars-amex" name="cars-amex" 
+                        title="15 dígitos empieza por 34-37"
+                        required/>
+                    </div>
+                </li>
+
+                <li style="margin-top:20px">
+                    <div><label style="font-weight: bold" for="documento">Ingrese CUIT/CUIL</label></div>
+                    <div>
+                        <input type="text" 
+                        pattern="^\d{2}\-\d{8}\-\d{1}$" 
+                        id="documento" name="documento" 
+                        placeholder="formato 27-34456785-5"
+                        required/>
+                    </div>
+                </li>
+
+        <li style="margin-top:20px"><input type="submit" value="Enviar"/></li>
+        <li style="margin-top:20px"><input type="reset" value="Restablecer"/></li>
+        </form>
+    </main>
+    <footer>
+        <h2>Datos del Alumno</h2>
+        <div>Yainy Garcia</div>
+        <div><a href="mailto:yainy.garcia@comunidad.ub.edu.ar">yainy.garcia@comunidad.ub.edu.ar</a></div>
+    </footer>
+</body>
+</html>

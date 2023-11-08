@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROGRAMACION EN AMBIENTE DE REDES</title>
+</head>
+<body>
+    <header>
+        <h1>Protocolo HTTP</h1>
+    </header>
+    <hr>
+    <nav>
+        <h2>Sección de referencias sobre el protocolo HTTP</h2>
+        <ul>
+            <li><a href="https://aws.amazon.com/es/cloudfront/">Amazon CloudFront</a></li>
+        </ul>
+        <ul>
+            <li><a href="https://www.fastly.com/es/">Fastly</a></li>
+        </ul>
+    </nav>
+    <hr>
+    <section>
+        <h2>Sección de preguntas sobre el protocolo HTTP</h2>
+
+        <ul>
+            <li>
+                <div>
+                    <b>¿Sobre que protocolo binario está montado el protocolo HTTP?</b>
+                </div>
+                <div>
+                    Sobre el protocolo TCP.
+                </div> 
+            </li>
+            <br>
+
+            <li>
+                <div>
+                    <b>¿Cuáles son los clientes http y los servidores http mas utilizados?</b>
+                </div>
+                <div>
+                    <div><u>Cliente:</u>
+                        <ul>
+                            <li>Navegador</li>
+                            <li>CURL</li>
+                            <li>Librerias nativas</li>
+                        </ul>
+                    </div> 
+                    <div><u>Servidores:</u>
+                        <ul>
+                            <li>Apache</li>
+                            <li>Microsoft IIS/li>
+                            <li>Nginx</li>
+                            <li>Google GWS</li>
+                        </ul>
+                    </div>   
+                </div> 
+            </li>
+            <br>
+            
+            <li>
+                <div>
+                    <b>¿Qué verbos admite un comando en el requerimiento HTTP?</b>
+                </div>
+                <div>
+                    GET, POST, PUT, DELETE.
+                </div> 
+            </li>
+            <br>
+
+            <li>
+                <div>
+                    <b>¿Qué contenido lleva el body de un requerimiento HTTP?</b>
+                </div>
+                <div>
+                    Contiene datos ingresados en campos de un formulario y/o archivos enviados y/o subidos al servidor. 
+                    Además que estos datos pueden estar en cualquier formato.
+                </div> 
+            </li>
+            <br>
+
+            <li>
+                <div>
+                    <b>¿Qué diferencia existe entre un URL y un URI?</b>
+                </div>
+                <div>
+                    La URI es el recurso como tal, pero URL nos da información para poder encontrar este recurso en Internet, 
+                    algo así como la dirección postal.
+                    <ul>
+                        <li>URL: (localizador uniforme de recursos).</li>
+                        <li>URI: (identificador uniforme de recursos).</li>
+                    </ul>    
+                </div> 
+            </li>
+            <br>
+
+            <li>
+                <div>
+                    <b>¿En qué variables quedan almacenados datos de las respuestas http?</b>
+                </div>
+                <div>
+                    Quedan almacenados sobre variables denominadas cookies.
+                </div> 
+            </li>
+            <br>
+
+            <li>
+                <div>
+                    <b>¿Qué significa Virtual hosting?</b>
+                </div>
+                <div>
+                    Es una de la mejoras que tuvo HTTP1.1 que no tenia HTTP1.0, que trata sobre múltiples dominios sobre una misma ip, es decir 
+                    que en un mismo servidor web se maneje múltiples nombre de hosting distinto sobre esa misma ip.
+                </div> 
+            </li>
+            <br>
+
+            <li>
+                <div>
+                    <b>¿Por qué el HTTP se considera STATE LESS?</b>
+                </div>
+                <div>
+                    Significa que es un protocolo sin estado. No puede mantener continuamente el estado o sesión de una aplicación, 
+                    es decir, no guarda ningún dato entre dos peticiones en la mísma sesión, ya que después de un determinado 
+                    número de mensajes de requerimiento y respuesta, la conexión se rompe, por diferentes razones, puede ser por parte
+                    del cliente que no siguió enviando requerimientos, o por parte del servidor, que por un determinado tiempo 
+                    por no recibir un requerimiento rompe la conexión.
+                </div> 
+            </li>
+            <br>
+        </ul>
+    </section>
+    <hr>
+    <section>
+        <h2>Sección de imagenes sobre el protocolo HTTP</h2>
+        <div>
+            <p>El contenido del mensaje según sea la petición o la respuesta lo podemos ver en el siguiente esquema:</p>
+            <img src="./resources/img-protocolo-http.png" height="400px" width="600px"> 
+        </div>
+    </section>
+    <hr>
+    <section>
+        <h2>Sección de videos sobre el protocolo HTTP</h2> <!--REVISAR REPRODUCIR EL VIDEO-->
+        <div>
+            <video src="./resources/http-video.mp4" width="640" height="480"></video>
+        </div>
+    </section>
+</body>
+<footer>
+    <h2>Datos del Alumno</h2>
+    <div>Yainy Garcia</div>
+    <div><a href="mailto:yainy.garcia@comunidad.ub.edu.ar">yainy.garcia@comunidad.ub.edu.ar</a></div>
+</footer>
+</html>

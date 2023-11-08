@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PROGRAMACION EN AMBIENTE DE REDES</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100vw;
+            height: auto;
+        }
+
+        .contenedor {
+            width: 90vw;
+            height: 100vh;
+            margin: auto;
+            background-color: #48af8d;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            border: 1px solid black;
+            
+        }
+        header, footer {
+            width: 90vw;
+            height: 10vh;
+            background-color: #48af8d;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap
+        }
+
+        .menu ul {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 90vw;
+            height: 5vh;
+            list-style: none;
+            background-color: #3557a1;            
+        }
+
+        .menu ul li a {
+            display: block;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            color: black;
+            text-align: center;
+            border: solid 1px black 
+        }
+
+        .menu ul li a:hover {
+            background-color: black;
+            color: white; 
+        }
+        .menu ul li {
+            width: 22.5vw;
+            
+        }
+
+        .contenido {
+            width: 90vw;
+            height: 74.5vh;
+            display: flex;
+        }
+
+        .texto {
+            width: 22.5vw;
+            height: auto;
+            background-color: gray;
+        }
+
+        .contenido .imagen {
+            width: 17.8vw;
+            height: 20vh;
+        }
+
+        #fot-2 {
+           
+            transform: translate(-10%, -20%);
+           
+       }
+
+       #fot-1 {
+            transform: rotateZ(10deg)
+       }
+
+        .imagen img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        @media (min-width:700px) and (max-width:900px){
+            .descarto-2  {
+                display:none;
+            }
+            .contenido {
+                overflow-y: scroll;    
+            }
+
+            .menu ul {
+                flex-direction: column;
+                align-content: flex-start;
+                height: auto;
+            }
+
+            .menu ul li a {
+                display: block;
+                padding: 0.5rem 1rem;
+                text-decoration: none;
+                color: black;
+                border: solid 1px black;
+                max-width: 90vw;
+                width: 700vw;
+            }
+
+            .menu ul li a:hover {
+                background-color: black;
+                color: white; 
+            }
+
+            .menu ul li {
+                width: auto
+            }
+
+            header, footer {
+                height: auto;
+            }
+
+            .texto {
+                width: 30vw;
+                height: auto;
+                
+            }   
+            
+            .contenido .imagen {
+                width: 40vw;
+                height: 25vh;
+            }
+
+            .contenido {
+                background-color: gray
+            }
+            
+            
+        }
+        @media (min-width:300px) and (max-width:700px) {       
+            .descarto  {
+                display:none;
+            }
+            .contenido {
+                overflow-y: scroll;          
+            }
+
+            .menu ul {
+                flex-direction: column;
+                align-content: flex-start;
+                height: auto;
+            }
+
+            .menu ul li a {
+                display: block;
+                padding: 0.5rem 1rem;
+                text-decoration: none;
+                color: black;
+                border: solid 1px black;
+                max-width: 90vw;
+                width: 300vw;
+            }
+
+            .menu ul li a:hover {
+                background-color: black;
+                color: white; 
+            }
+
+            .menu ul li {
+                width: auto
+            }
+
+            header, footer {
+                height: auto;
+            }
+
+            .texto {
+                width: 45vw;
+                height: auto;
+                
+            }   
+            
+            .contenido .imagen {
+                width: 40vw;
+                height: 25vh;
+            }
+
+            .contenido {
+                background-color: gray
+            }
+            
+            footer div {
+                margin: auto;
+                text-align: center;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <header><h1>Maquetación Responsive</h1></header>
+        <nav class="menu">
+            <ul>
+                <li><a href="../../../Html/index.html">HTML</a></li>
+                <li><a href="../../index.html">CSS</a></li>
+                <li><a href="../../../Jscript/index.html">JSCRIPT</a></li>
+                <li><a href="../../../Php/index.html">PHP</a></li>
+            </ul>        
+        </nav>
+        <div class="contenido">
+            <div class="texto"><p>Lorem ipsum, dolor sit amet consectetur adipism ipsum, dolor sit amet consectetur adipism ipsum, dolor sit amet consectetur adipism ipsum, dolor sit amet consectetur adipism ipsum, dolor sit amet consectetur adipism ipsum, dolor sit amet consectetur adipism ipsum, dolor sit amet consectetur adipisicing elit. Excepturim ipsum, dolor sit amet consectetur adipism ipsum, dolor sit amet consectetur adipism ipsum, dolor sit amet consectetum, dolor sit amet consectetur adipis autem numquam incidunt distinctio minus corrupti fuga consequuntur natus, possimus eum, eos quam maiores, modi debitis quasi aliquid pariatur atque temporibus accusantium. Vero, ullam ea magni dignissimos iste enim omnis officia, non consequuntur vitae possimus atque at soluta expedita! Temporibus, ipsum.</p></div>
+
+            <div class="texto">
+                <p>ipsum fugit eligendi! Minimaconsectetur adipism ipsum, dolor sit amet consectetur at consectetur adis ipsum, dolor sit amet conse nam laborum quasi cupiditate, corrupti enim, accusantium rerum obcaecati ratione sapiente blanditiis illo quas, alias cumque iusto ducimus minus vitae itaque tenetur?</p>
+                <div class="imagen" id="fot-1"><img src="meme12.png" alt="foto"></div>
+                <p>ipsum fugit eligendi! Minimaconsectetur adipism ipsum, dolor sit amet consectetur adipism ipsum, doloolor sit amet consectetur adis ipsum, dolor sit amet conseatione sapiente blanditiis illo quas, alias cumque iusto ducimus minus vitae itaque tenetur?</p>
+            </div>
+
+            <div class="texto descarto"><p>Lorem ipsumconsectetur adipism ipsum, dolor sit amet consectetur adipism ipsum, dolor sit amet consectetur adis ipsum, dolor sit amet conseconsectetur adipism ipsum, dolor sit amet consectetur adipism ipsum, dolor sit amet consecteturcteturconsectetur adipism ipsum, dolor sit amet consectetur adipism ipsum, dolor sit amet consectetur adis ipsum, dolor sit amet colima nam laborum quasi cupiditate,psum fugit eligendi! Minima nam laborum quasi cupiditate,rupti enim, accusantium rerum obcaecati ratione sapiente blanditiis illo quas, alias cumque iusto ducimus minus vitae itaque tenetur?</p></div>
+
+            <div class="texto descarto descarto-2"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam soluta illum quo asperiores, eius repellendus labore nesciunt natus nisi alias vel voluptatum, consectetur qui <br>ipsum fugit eligendi! Minima nam laborum quasi consectetur adipism ipsum, dolor sit amet consectetur adictetur adis ipsum, dolor sit amet conseconsectetur adipisonseconsectetur adipism ipsum, dolor sit amet consectetur adipism ipsum, dolor sit amet consectetur adis ipsum, dolor sit amet conseconsectetur adipism ipsum, dolor sit amet consectetur adipism ipsum, dolor sit amet consectetur adis ipsum, dolor sit amet consecupiditate, corrupti enim, accusantium rerum obcaecati ratione sapiente blanditiis illo quas, alias cumque iusto ducimus minus vitae itaque tenetur?</p></div>
+
+            <div class="texto descarto descarto-2">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam soluta illum quo asperiores, eius repellendus labore nesciunt natuss ipsum, dolor sit ait amet conseconsectetur adipism ipsum, dolor sit amet consectetur adipism ip dolor sit  nisi alias vel voluptatum, consectetur qui ipsum fugit eligendi! Minima nam laborum quasi cupiditate, corrupti enim, accusantium rerum obcaecati ratione sapiente blanditiis illo quas, alias cumque iusto ducimus minus vitae itaque tenetur?</p>
+                <div class="imagen" id="fot-2"><img src="meme13.png" alt="foto"></div>
+            </div>
+            
+        
+        </div>
+        <footer>
+            <div>
+                <h2>Datos del Alumno</h2>
+                <h3>Yainy Garcia</h3>
+                <div><a href="mailto:yainy.garcia@comunidad.ub.edu.ar">yainy.garcia@comunidad.ub.edu.ar</a></div>
+            </div>
+        </footer>                             
+    </div>
+</body>
+</html>

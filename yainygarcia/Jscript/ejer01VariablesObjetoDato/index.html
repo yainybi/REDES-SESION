@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PROGRAMACION EN AMBIENTE DE REDES</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .contenedor {
+            height: 60vh;
+            width: 80vw; 
+            margin: 2% auto; 
+        }
+
+        div .crear {
+            height: 35vh;
+            width: 80vw;
+            padding: 1% 0 0 3%;
+            background-color: lightseagreen;
+            border-radius: 60px;
+            border: 2px solid black;
+        }
+
+        label {
+            display: block;
+            margin: 1% 0 0 3%;
+            font-size: 1em;
+        }
+
+        input {
+            font-size: 1em;
+            margin: 0 0 0 3%
+        }
+
+        #crear {
+            margin: 1% 0 0 3%;
+            width: 8vw;
+            display: block;
+        }
+
+        .control {
+            margin: 0 0 0 2%;
+            height: 15vh;
+            width: 30vw;
+        }
+
+        .control h2{
+            margin: 2% 0 2% 10%;
+        }
+
+        .control div {
+            display: flex;
+            justify-content: space-around
+        }
+        .control button {
+            height: 5vh;
+            width: 12vw;;
+        }
+        
+    </style>
+</head>
+<header><h1>Variables Objeto Dato</h1></header>
+<body>
+    <!--INPUTS, RECOPILA DATOS DEL OBJETO-->
+    <div class="contenedor">
+        <div class="crear">
+            <h2>ALTA CEDEARs</h2>
+            <label for="nombre">Nombre: </label>
+            <input type="text" name="nombre" id="nombre" maxlength="20" placeholder="Ingresar Nombre" required>
+            <label for="">Ticket: </label>
+            <input type="text" name="ticket" id="ticket" maxlength="10" placeholder="Ingresar Ticket" required>
+            <label for="fn">Valor del Cedear: </label>
+            <input type="number" name="valor" id="valor" placeholder="Ingresar Valor" required>
+            <button id="crear">Crear CEDEARs</button>
+        </div>
+     <!--BOTONES, LISTAR - OCULTAR-->
+        <div class="control">
+            <h2>Control</h2>
+            <div>
+                <button id="listar">Lista de CEDEARs</button>
+                <button id="ocultar">Ocultar CEDEARs</button>
+            </div>    
+        </div>
+    </div>
+    <div id="presentacion"></div>
+    <footer>
+        <h2>Datos del Alumno</h2>
+        <div>Yainy Garcia</div>
+        <div><a href="mailto:yainy.garcia@comunidad.ub.edu.ar">yainy.garcia@comunidad.ub.edu.ar</a></div>
+    </footer>
+
+    
+    <script>
+        //declaramos un objeto -> tambien conocido diccionario (clave - valor)
+        var objetoCedear = {};
+        objetoCedear = {nombre: 'Amazon', ticket: 'AMZN', valor: 719.33};
+
+        //declaramos un array -> que va a contener un diccionario
+        var arregloCedear = [objetoCedear];
+
+        //Ingresamos otro, objeto(diccionariio en el array) con el metodo push
+        arregloCedear.push(
+            {
+                nombre: 'Apple Inc.', ticket: 'AAPL', valor: 13331.93
+            },
+        );
+       
+        //declaramos un diccionario de Cedears
+        //tendra como clave Cedears y valor array de Cedears [Cedears1, Cedears2, Cedears3]
+        var objetoCedears = {cedear: arregloCedear}; 
+
+        //llamamos el objeto cedear llamamos el cedear y iteramos en cada uno de sus elementos
+        // item-> nombre, ticket...
+        //indice -> posicion
+        // objetoCedears.cedear.forEach(mostrarCedear);  
+        //recibe como parametro un funcion callback q luego yo la defino abajo 
+       
+
+        var mostrarListado = document.getElementById('listar');
+        var ocultarListado = document.getElementById('ocultar');
+        var crear = document.getElementById('crear');
+
+        crear.onclick = function() {
+            var nombreCedear = document.getElementById('nombre').value;
+            var ticketCedear = document.getElementById('ticket').value;
+            var valorCedear = document.getElementById('valor').value;
+            arregloCedear.push(
+                {
+                    nombre: nombreCedear, ticket: ticketCedear, valor: valorCedear
+                }
+            )
+            limpiarCampos();
+        }
+        
+
+        mostrarListado.onclick = function() {
+            document.getElementById("presentacion").style.display="block"; //para mostrar el div
+            var tabla = "<table border=1 width=50% cellspacing=0> <caption>Lista de CEDEARs</caption>";
+            tabla += "<thead> <tr style='background-color: red'><td>Nombre</td> <td>Ticket</td> <td>Valor</td></tr></thead";
+                    arregloCedear.forEach(function(item, indice){
+                        tabla += "<tbody><tr style='background-color: coral'><td>" + item.nombre + "</td>";
+                        tabla += "<td>" + item.ticket + "</td>";
+                        tabla += "<td>" + item.valor + "</td></tr></tbody>";
+                        
+                    });
+            var tamañoArreglo = "<h3> longitud del arreglo objeto: " + arregloCedear.length + "</h3>";
+            document.getElementById('presentacion').innerHTML = tabla + tamañoArreglo;
+        }
+
+        ocultarListado.onclick = function(){
+            document.getElementById("presentacion").style.display="none"; //para ocultar el div
+        }
+
+          // Limpiar los campos de entrada
+        function limpiarCampos() {
+            document.getElementById('nombre').value = '';
+            document.getElementById('ticket').value = '';
+            document.getElementById('valor').value = '';   
+        }
+    </script>
+</body>
+</html>

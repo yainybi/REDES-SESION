@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROGRAMACION EN AMBIENTE DE REDES</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .contenedor {
+            width: 80%;
+            border: 1px solid black;
+            margin: auto;
+        }
+
+        .menu ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            background-color: lightseagreen;
+            list-style: none;
+        }
+
+        .menu li {
+            margin: auto;
+            width: 30%;
+            background-color: lightseagreen;
+            text-align: center;
+            position: relative;
+            border: solid 1px black;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .submenu {
+            position: absolute;
+            top: 100%;
+            display: none;
+            width: 100%;
+        }
+
+        .menu li:hover .submenu {
+            display: block;
+        }
+
+        .submenu ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column; /* Cambio a vertical */
+            align-items: flex-start; /* Alinear al inicio vertical */
+        }
+
+        .submenu li {
+            border: solid 1px black;
+            text-align: center;
+            background-color: rgb(32, 178, 122);
+            width: 100%; /* Ancho completo para lista vertical */
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .submenu li:hover {
+            background-color: #6e6d6d;          
+        }
+
+        .menu li:hover {
+            background-color: #6e6d6d;          
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="menu">
+            <ul>
+                <li>HTML
+                    <div class="submenu">
+                        <ul>
+                            <li><a href="../../../Html/ejer02Tablas/index.html">TABLAS</a></li>
+                            <li><a href="../../../Html/ejer03Formularios/index.html">FORMULARIOS</a></li>
+                            <li><a href="../../../Html/ejer04Iframe/index.html">IFRAME</a></li>
+                        </ul>
+                    </div>
+                </li>
+               
+                <li>CSS
+                    <div class="submenu">
+                        <ul>
+                            <li><a href="../../CssParte1/index.html">PARTE 1</a></li>
+                            <li><a href="../../CssParte2/index.html">PARTE 2</a></li>
+                        </ul>
+                    </div>
+                </li>
+               
+                <li>JSCRIPT</li>
+                <li>ESPECIALES</li>
+                <li>PHP</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+
+

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PROGRAMACION EN AMBIENTE DE REDES</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+        }
+        .contenedor {
+            margin: auto;
+            width: 90vw;
+            height: 100vh;
+            background-color: lightcoral;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+        }
+
+        header, footer {
+            width: 90vw;
+            height: 30vh;
+            background-color: #48af8d;
+            text-align: center;
+        }
+
+        footer {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+    
+        .movimiento {
+            width: 90vw;
+            background-color: lightseagreen;
+            height: 70vh;
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        .movimiento .menu {
+            width: 20vw;
+            background-color: #3557a1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .menu .titulo-m{
+            margin-top: 5vh;
+            margin-bottom: 5vh;
+            font-style: italic;
+
+        }
+        .menu .items-m {
+            background-color: #e5e5e5;
+            width:10vw;
+        }
+
+        .menu .items-m a {
+            text-decoration: none;
+            color: #9cada4;
+            display: block;
+            text-align: center;
+            font-weight: bold;
+            height: 8vh;
+            padding: 2vh 0;
+        }   
+        
+        .menu .items-m a:hover {
+            background-color: #6e6d6d;
+            width:10vw;           
+        }
+
+
+        .movimiento .cont {
+            background-color: #e5e5e5;
+            width: 70vw;
+            overflow-y: scroll;
+            padding: 2vw 40vw 0 2vw;
+            text-align: justify;
+        } 
+        
+        footer div {
+                margin: auto;
+                text-align: center;
+            }   
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+        <header><h1>Maquetación Básica</h1></header>
+        <div class="movimiento">
+            <div class="menu">
+                <h2 class="titulo-m">Menu</h2>
+                <nav class="items-m">
+                    <a href="../../../Html/index.html">HTML</a>
+                    <a href="../../index.html">CSS</a>
+                    <a href="../../../Jscript/index.html">JSCRIPT</a>
+                    <a href="../../../Php/index.html">PHP</a>
+                </nav>
+            </div>
+            
+            <main class="cont">
+                <p>
+                Comenzamos un nuevo capítulo y un nuevo bloque donde veremos algunos temas web bastante importantes. Comenzaremos explicando qué es Bootstrap, el framework para diseño de sitios y aplicaciones web, creado por Twitter y tan de moda está en este momento. Este framework te permite crear sitios y aplicaciones web responsive, con un diseño espectacular, de una forma fácil y sencilla.
+                Todavía estás a tiempo de entrar en el sorteo de un kit de Arduino, solo tienes que suscribirte a nuestra lista de correo. También tienes a tu disposición un formulario de contacto para enviarnos cualquier duda o sugerencia. Si te mueves en redes sociales nos puedes seguir en Twitter (@programarfacilc) o en Facebook.
+                Como ya te he comentado, Bootstrap facilita la creación de sitios web responsive. Está enfocado a la parte front-end del desarrollo web (HTML, CSS y JavaScript). Recuerda que a partir de Abril de este año, Google se toma muy en serio todo lo relacionado con la adaptación de las webs a los distintos dispositivos, penalizando todas aquellas que no sean responsive. Por este motivo es crucial apoyarnos en frameworks como éste para conseguir que nuestra web se adapte, sin mucho esfuerzo, al mayor número de pantallas posibles.
+                Bootstrap contiene plantillas de diseño, tipografías, tablas, imágenes, formularios, botones y otros elementos de presentación basados en HTML y CSS. Se desarrolló como un proyecto interno de la empresa Twitter para agilizar los desarrollos. En proyectos de esta envergadura, muchas veces se hace insostenible el mantenimiento de cierto código. Me imagino que mantener todos los estilos en una web como Twitter, es un dolor de cabeza para los desarrolladores, y por este motivo surgió Bootstrap, de la necesidad de agilizar el desarrollo y mantenimiento de las hojas de estilos. Surgió a principios de la segunda década del 2000, hasta que en el 2012 fue liberado como código abierto y publicado en GitHub. En poco tiempo se convirtió en el proyecto más popular de esta comunidad. En la actualidad podemos encontrar la versión 3 cuya versión estable es la 3.3.5. En la actualidad están trabajando en la versión 4 que está en la fase Alpha, ya os hablaremos algún día de las diferentes fases de un proyecto.
+                Si quieres saber cómo empezar con este framework mira estos artículos:
+
+                <ul>
+                    <li><a href="https://programarfacil.com/blog/primeros-pasos-con-bootstrap/">Primeros pasos con Bootstrap</a></li>
+                    <li><a href="https://programarfacil.com/blog/crear-una-web-responsive-con-bootstrap/">Crear una web responsive con Bootstrap</a></li>
+                </ul>
+                </p>
+                <p>
+                <b>Obtener Bootstrap</b>
+                Para obtener este fabuloso framework solo tienes que acceder a la web oficial. Desde aquí te dan la opción de descargar tres versiones.
+                <ul>
+                    <li>CSS y JavaScript compilado. Quizás sea la forma más rápida y usual de utilizar Bootstrap. Es un paquete listo para usar, te lo descargas y listo. Esta versión contiene todo lo que necesitas para poder incorporar a tu proyecto este framework, no contiene ni documentación ni el código fuente.
+                    </li>
+                    <li>
+                        Código fuente (Less). Con esta versión te descargas los archivos originales Less y JavaScript. Es necesario tener un compilador de Less para poder compilar y utilizar Bootstrap en tu web. Es una versión para usuarios algo más avanzados pero da mucha flexibilidad gracias al precomilador de CSS Less.
+                    </li>
+                    <li>
+                        Código fuente (Sass). Se trata de un clon de la versión Less pero con el código fuente escrito en Sass. Está orientado a aplicaciones programadas con Ruby On Rails, Compass o cualquier otro proyecto basado en Sass.
+                    </li>
+                </ul>
+                Antes de continuar vamos a ver un poco por encima que son Less y Sass, precompiladores de CSS. Estos dos lenguajes te permiten programar a más alto nivel que las hojas de estilo en cascada, siendo más fácil y cómodo que el CSS puro. Siempre dependerá de la magnitud del proyecto pero, por pequeña que sea tu web, siempre aplicarás más o menos estilos. Gracias a los precompiladores de CSS el trabajo de creación y mantenimiento de las hojas de estilo es mucho más sencillo. Cabe destacar tres funcionalidades extras que nos aportan. Por un lado el anidamiento de reglas, permite anidar diferentes elementos de diseño reutilizando y disminuyendo el código. También encontrarás variables, permiten asignar valores como un color, esto implica que podríamos cambiar el color a toda nuestra hoja de estilos con solo cambiar el valor de esa variable. Por último existen los mixins, permiten incorporar todas las propiedades de una clase en otra clase haciendo más fácil aún el mantenimiento del código.
+
+                La mayor desventaja que tenemos con estos dos lenguajes, Less y Sass, es que no son interpretados por el navegador, lo que nos obliga a tener un compilador o una librería externa de JavaScript para que nos genere el CSS final que debemos añadir a nuestra web.
+
+                Ya te he enseñado tres maneras de descargar Bootstrap, pero si no quieres ni descargarlo puedes hacer uso de él a través de un CDN (Content Delivery Network). Los archivos se encuentran alojados en diferentes servidores y tu puedes hacer uso de ellos. Automáticamente, al hacer la petición, te redirigirán al servidor más cercado. Es otra opción para poder utilizar Bootstrap. Aquí te dejo los enlaces.
+
+                <ul>
+                    <li>Ultimo CSS comprimido y compilado</li>
+                    <li>Ultimo JavaScript comprimido y compilado</li>
+                </ul>
+                </p>
+            </main>
+        </div>
+
+        <footer>
+            <div>
+                <h2>Datos del Alumno</h2>
+                <h3>Yainy Garcia</h3>
+                <div><a href="mailto:yainy.garcia@comunidad.ub.edu.ar">yainy.garcia@comunidad.ub.edu.ar</a></div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

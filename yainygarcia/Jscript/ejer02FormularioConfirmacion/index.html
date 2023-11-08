@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PROGRAMACION EN AMBIENTE DE REDES</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .contenedor {
+            height: 60vh;
+            width: 80vw;
+            margin: 2% auto;
+            background-color: lightseagreen;
+            border-radius: 60px;
+            padding: 1% 0 0 3%;
+            border: 2px solid black;
+        }
+
+        label {
+            display: block;
+            margin: 1% 0 0 3%;
+            font-size: 1em;
+        }
+
+        input {
+            font-size: 1em;
+            margin: 0 0 0 3%
+        }
+
+       .botones {
+           height: 25vh;
+           display: flex;
+           justify-content: center;
+           align-items: flex-end;
+       }
+
+       .botones input {
+           width: 10vw;
+       }
+
+
+        
+    </style>
+</head>
+<header><h1>Formulario de Confirmación</h1></header>
+<body>
+    <div class="contenedor">
+            <form id="formulario">
+                <label for="nombre">Nombre: </label>
+                <input type="text" name="nombre" id="nombre" maxlength="20" placeholder="Ingresar Nombre" required>
+                <label for="">Ticket: </label>
+                <input type="text" name="ticket" id="ticket" maxlength="10" placeholder="Ingresar Ticket" required>
+                <label for="fn">Valor del Cedear: </label>
+                <input type="number" name="valor" id="valor" placeholder="Ingresar Valor" required>
+                
+                <div class="botones">
+                    <input type="reset" id="reset" value="Blanquear">
+                    <input type="submit" id="enviar">
+                </div>
+            </form>
+    </div>   
+    <footer>
+        <h2>Datos del Alumno</h2>
+        <div>Yainy Garcia</div>
+        <div><a href="mailto:yainy.garcia@comunidad.ub.edu.ar">yainy.garcia@comunidad.ub.edu.ar</a></div>
+    </footer>
+    
+    <script>
+        var enviar = document.getElementById('enviar');
+
+        enviar.onclick = function() {
+            if(confirm("¿Esta seguro de enviar?")) {
+                document.getElementById('formulario').method="get";
+                document.getElementById('formulario').action="respuestaFormulario.html"
+            }
+            else{
+            alert("envio cancelado")            
+            }
+        }
+
+    </script>
+</body>
+</html>
