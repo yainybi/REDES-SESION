@@ -41,7 +41,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `nombre`, `clave`, `fecha_alta`, `estado`) VALUES
-(1, 'yainybi', '4bb50b37f08ac8d0b3f11228deccdc66a8f6c31a', '2023-11-01', 1);
+(1, 'yainybi', '1234', '2023-11-01', 1);
 
 --
 -- Índices para tablas volcadas
